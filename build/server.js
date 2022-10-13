@@ -92,4 +92,7 @@ function getcode(msg, res) {
 app.get("/getcode", (req, res) => {
     getcode(req.query.msg, res);
 });
+app.get("/", (_, res) => {
+    res.send("Hello 😗");
+});
 app.listen(port, () => console.log("server listening on port " + port));
